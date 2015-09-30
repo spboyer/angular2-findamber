@@ -18,7 +18,7 @@ import {DashboardComponent} from './dashboard-component';
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">angular2-go</spano
+      <span class="mdl-layout-title">angular2-go</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" [router-link]="['./dashboard']">Dashboard</a>
         <a class="mdl-navigation__link" [router-link]="['./characters']">Characters</a>
