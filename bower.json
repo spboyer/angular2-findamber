@@ -1,0 +1,22 @@
+{
+  "name": "angular2-findamber",
+  "version": "0.0.1",
+  "homepage": "https://github.com/spboyer/angular2-findamber",
+  "authors": [
+    "Shayne Boyer <spboyer@live.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.5"
+  }
+}
