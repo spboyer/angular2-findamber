@@ -27,7 +27,7 @@ export class ChildService {
 	}
 
 
-    getChild(caseNumber: string){
+    getChildByCaseNumber(caseNumber: string){
         return Promise.resolve(ITEMS)
         .then((children) => { return children.filter((c) => {
 				return c.caseNumber === caseNumber;
