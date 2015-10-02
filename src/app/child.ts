@@ -1,4 +1,4 @@
-export interface Child {
+export class Child {
     name: string;
     ageNow: number;
     caseType: string;
