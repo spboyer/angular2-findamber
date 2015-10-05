@@ -1,15 +1,13 @@
 import {Component, FORM_DIRECTIVES, View} from 'angular2/angular2';
+import {BeTogetherComponent} from './be.together.component';
+import {KidsWhereComponent} from './kids.where.component';
+import {ResourcesComponent} from './resources.component';
+import {FooterComponent} from './footer.component';
 
 @Component({ selector: 'my-dashboard' })
 @View({
-	template: `
-		<h2>Dashboard</h2>
-		<div>Hello {{name}}</div>
-		<input [(ng-model)]="name" />
-		<button (click)="sayHello()">Say Hello</button>
-		<p>{{message}}</p>
-	`,
-	directives: [FORM_DIRECTIVES]
+	templateUrl: 'app/dashboard.component.html',
+	directives: [FORM_DIRECTIVES, BeTogetherComponent, KidsWhereComponent, ResourcesComponent, FooterComponent]
 })
 export class DashboardComponent {
 	public name = 'john';
