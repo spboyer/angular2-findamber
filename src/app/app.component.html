@@ -1,3 +1,51 @@
-<a [router-link]="['./Dashboard']">Dashboard</a>
-<a [router-link]="['./Characters']">Characters</a>
-<router-outlet></router-outlet>
+
+	<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+		<div class="mdl-layout__header-row">
+			<span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="images/amber_logo.png">
+        </span>
+			<!-- Add spacer, to align navigation to the right in desktop -->
+			<div class="android-header-spacer mdl-layout-spacer"></div>
+			<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+				<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+					<i class="material-icons">search</i>
+				</label>
+				<div class="mdl-textfield__expandable-holder">
+					<input class="mdl-textfield__input" type="text" id="search-field" />
+				</div>
+			</div>
+			<!-- Navigation -->
+			<div class="android-navigation-container">
+				<nav class="android-navigation mdl-navigation">
+					<a class="mdl-navigation__link mdl-typography--text-uppercase" [router-link]="['./Dashboard']">Recent</a>
+					<a class="mdl-navigation__link mdl-typography--text-uppercase" [router-link]="['./Characters']">Near</a>
+					<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Search</a>
+					<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">About</a>
+					<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Resources</a>
+				</nav>
+			</div>
+			<span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/amber_logo.png">
+        </span>
+		</div>
+	</div>
+
+	<div class="android-drawer mdl-layout__drawer">
+		<span class="mdl-layout-title">
+    	<img class="android-logo-image" src="images/amber_logo_white.png">
+    </span>
+		<nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href="">Recent</a>
+			<a class="mdl-navigation__link" href="">Near</a>
+			<a class="mdl-navigation__link" href="">Search</a>
+			<a class="mdl-navigation__link" href="">About</a>
+			<a class="mdl-navigation__link" href="#resources">Resources</a>
+		</nav>
+	</div>
+<!--
+	<a [router-link]="['./Dashboard']">Dashboard</a>
+	<a [router-link]="['./Characters']">Characters</a> -->
+	<div class="android-content mdl-layout__content">
+		<a name="top"></a>
+		<router-outlet></router-outlet>
+	</div>
