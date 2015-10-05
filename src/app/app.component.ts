@@ -5,11 +5,7 @@ import {DashboardComponent} from './dashboard.component';
 
 @Component({ selector: 'my-app' })
 @View({
-  template: `
-    <a [router-link]="['./Dashboard']">Dashboard</a>
-    <a [router-link]="['./Characters']">Characters</a>
-    <router-outlet></router-outlet>
-    `,
+  templateUrl: 'app/app.component.html',
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
