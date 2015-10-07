@@ -1,8 +1,14 @@
 <div class="android-be-together-section mdl-typography--text-center">
     <div class="android-font android-slogan">be aware. save a child.</div>
     <div class="android-font android-sub-slogan">welcome to amber... search your state. check alerts. donate.</div>
-    <div>
-        <input />
+    <div class="mdl-grid">
+
+     <div *ng-for="#child of children | slice:0:6" class="mdl-cell mdl-cell--4-col" (click)="gotoDetail(child)">
+            <div>
+                <h4>{{child.name}}</h4>
+            </div>
+        </div>
+
     </div>
     <a href="#screens">
         <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
