@@ -1,9 +1,7 @@
-<div class="android-be-together-section mdl-typography--text-center" style="text-align: center">
-    <div class="android-font android-slogan">be aware. save a child.</div>
-    <div class="android-font android-sub-slogan">welcome to amber... search your state. check alerts. donate.</div>
-    <div class="mdl-grid">
 
-        <div *ng-for="#child of children | slice:0:3" class="mdl-cell mdl-cell--4-col" (click)="gotoDetail(child)">
+    <div class="mdl-grid" style="margin:auto 0 !important">
+
+        <div *ng-for="#child of children | slice:0:12" class="mdl-cell mdl-cell--4-col" (click)="gotoDetail(child)">
 
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" [style.background]='getUrl(child)' style="margin: 0 auto">
                 <div class="mdl-card__title">
@@ -29,9 +27,3 @@
         </div>
 
     </div>
-    <a href="#screens">
-        <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-            <i class="material-icons">expand_more</i>
-        </button>
-    </a>
-</div>

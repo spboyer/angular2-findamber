@@ -4,6 +4,7 @@ import {KidsWhereComponent} from './kids.where.component';
 import {ResourcesComponent} from './resources.component';
 import {FooterComponent} from './footer.component';
 
+
 @Component({ selector: 'my-dashboard' })
 @View({
 	templateUrl: 'app/dashboard.component.html',
