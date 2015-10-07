@@ -6,6 +6,19 @@ import {Child} from 'child';
 @View({
   templateUrl: 'app/be.together.html',
   styles: [`
+        .demo-card-wide.mdl-card {
+        width: 300px;
+        }
+        .demo-card-wide > .mdl-card__title {
+        color: #fff;
+        height: 125px;
+        }
+        .demo-card-wide > .mdl-card__menu {
+        color: #fff;
+        }
+        .mdl-card__supporting-text {
+            color: #fff
+        }
   `],
   directives: [CORE_DIRECTIVES]
 })
@@ -16,6 +29,7 @@ export class BeTogetherComponent implements OnInit {
 
         onInit() { this.children = this.getchildren(); }
 
+        getUrl(child: Child) { return `url('${child.photoC[0]}') center / cover`}
 
     getchildren() {
     this.children = [];

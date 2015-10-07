@@ -14,14 +14,11 @@ export class ChildService {
 		this.children.length = 0;
 		let promise = this._http.get('http://localhost:3000/current')
 			.map((response: any) => response.json()).toPromise()
-			.then((characters: Child[]) => {
-				this.children.push(...characters);
+			.then((children: Child[]) => {
+				this.children.push(...children);
 				return this.children;
 			})
-			// //TODO: fix catch
-			// //.catch(e => this._fetchFailed(e)) // want we want to say
-			// // baroque way to ensure promise stays Promise<Hero[]>
-			// .then<Character[]>(_ => _, e => this._fetchFailed(e));
+
 		  .then((_: any) => _, (e: any) => this._fetchFailed(e));
 			return promise;
 	}
